@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HỆ THỐNG</title> <!-- Sửa title thành "Blog của tôi" -->
+    <style>
+     h1,h2,h3,h4,h5,label,input,a,li,ul{
+    font-family: "tahoma";
+    color: #444;
+    text-decoration: none;
+    list-style-type: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+h2
+{
+    text-align: center;
+}
+input {
+    width: 330px;
+    display: block;
+    margin: 0 auto;
+    text-align: center  ;
+    height: 40px;
+    border-radius: 60px;
+    margin-bottom: 20px; /* Thêm khoảng cách 20px dưới mỗi thẻ input */
+    border-width: 1px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #3AA0E9;
+    border: none;
+    width: 330px;
+    height: 40px;
+    color:white;
+    font-weight: bold;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    
+
+    <nav>
+        <h1><a href="/">SHOP QUẦN ÁO</a></h1>
+
+        <ul>
+            <% if(user) { %>
+   
+            <li><a href="/logout">Logout</a></li>
+
+            <% } else { %>
+            <li><a href="/signup">Signup</a></li>
+            <li><a href="/login">Login</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</body>
+</html>
